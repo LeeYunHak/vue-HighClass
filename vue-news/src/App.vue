@@ -1,17 +1,13 @@
 <template>
   <div id="app">
-    hi
+    <router-view></router-view>
   </div>
 </template>
 
 <script>
 
 export default {
-  fetchData() {
-    console.log('h');
-    console.log('as');
-    console.log('h');
-  }
+  
 }
 </script>
 

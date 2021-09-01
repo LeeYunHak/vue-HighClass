@@ -1,6 +1,6 @@
 <template>
   <div>
-      news
+      뉴스
   </div>
 </template>
 

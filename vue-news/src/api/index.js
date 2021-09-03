@@ -11,16 +11,16 @@ function fetchNewsList(){
     return axios.get(`${config.baseUrl}/news/1.json`);
 }
 
-function jobsList(){
+function fetchJobsList(){
     return axios.get(`${config.baseUrl}/jobs/1.json`);
 }
 
-function askList(){
+function fetchAskList(){
     return axios.get(`${config.baseUrl}/ask/1.json`)
 }
 
 export {
     fetchNewsList,
-    jobsList,
-    askList
+    fetchJobsList,
+    fetchAskList
 }

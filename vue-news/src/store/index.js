@@ -1,8 +1,7 @@
 import Vue from 'vue';
 import Vuex from 'vuex';
 import { fetchNewsList } from '../api/index.js';
-import { fetchAskList } from '../api/index.js';
-import { fetchJobsList } from '../api/index.js';
+import { fetchAskList, fetchJobsList } from '../api/index.js';
 
 Vue.use(Vuex);
 
@@ -44,11 +43,10 @@ export const store = new Vuex.Store({
                     console.log(error);
                 })
         },
-        FETCH_JOBS(context){
+        FETCH_JOBS({ commit }){
             fetchJobsList()
-                .then(response => {
-                    console.log(response.data);
-                    context.commit('SET_JOBS', response.data)
+                .then(({ data }) => {
+                    commit('SET_JOBS', data)
                 })
                 .catch(error => {
                     console.log(error);
